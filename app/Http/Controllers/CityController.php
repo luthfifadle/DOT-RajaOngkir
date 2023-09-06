@@ -19,10 +19,16 @@ class CityController extends Controller
 
     public function index (Request $request)
     {
-        if ($request->city_id) {
-            $data = City::where('city_id', $request->city_id)->first();
+        if ($request->swap_raja_ongkir == 'true')
+        {
+            $response = $this->rajaOngkirService->city($request->city_id);
+            $data = $response->rajaongkir->results;
         } else {
-            $data = CIty::get();
+            if ($request->city_id) {
+                $data = City::where('city_id', $request->city_id)->first();
+            } else {
+                $data = City::get();
+            }
         }
 
         return $this->sendResponse($data, 'Get data Province success');

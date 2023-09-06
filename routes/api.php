@@ -17,7 +17,12 @@ use App\Http\Controllers\ProvinceController;
 |
 */
 
-Route::prefix('search')->group(function () {
+Route::prefix('auth')->group(function () {
+    Route::post('register', [AuthController::class, 'register']);
+    Route::post('login', [AuthController::class, 'login']);
+});
+
+Route::prefix('search')->middleware(['auth:sanctum'])->group(function () {
     Route::get('province', [ProvinceController::class, 'index']);
     Route::get('city', [CityController::class, 'index']);
 });

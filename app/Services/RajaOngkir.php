@@ -13,7 +13,7 @@ class RajaOngkir
         if ($id) {
             $response = Http::withHeaders([
                 'key' => env('RAJAONGKIR_KEY')
-            ])->get(env('RAJAONGKIR_URL').'/province'.$id)->object();
+            ])->get(env('RAJAONGKIR_URL').'/province?id='.$id)->object();
 
         } else {
             $response = Http::withHeaders([
@@ -50,7 +50,7 @@ class RajaOngkir
         if ($id) {
             $response = Http::withHeaders([
                 'key' => env('RAJAONGKIR_KEY')
-            ])->get(env('RAJAONGKIR_URL').'/city'.$id)->object();
+            ])->get(env('RAJAONGKIR_URL').'/city?id='.$id)->object();
 
         } else {
             $response = Http::withHeaders([

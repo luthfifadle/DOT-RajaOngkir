@@ -19,10 +19,16 @@ class ProvinceController extends Controller
 
     public function index (Request $request)
     {
-        if ($request->province_id) {
-            $data = Province::where('province_id', $request->province_id)->first();
+        if ($request->swap_raja_ongkir == 'true')
+        {
+            $response = $this->rajaOngkirService->province($request->province_id);
+            $data = $response->rajaongkir->results;
         } else {
-            $data = Province::get();
+            if ($request->province_id) {
+                $data = Province::where('province_id', $request->province_id)->first();
+            } else {
+                $data = Province::get();
+            }
         }
 
         return $this->sendResponse($data, 'Get data Province success');

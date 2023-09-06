@@ -72,7 +72,7 @@ class RajaOngkir
             $datas = $response->rajaongkir->results;
 
             foreach($datas as $data) {
-                $checkData = City::find($data->province_id);
+                $checkData = City::find($data->city_id);
 
                 if (!$checkData) {
                     $data = (array) $data;

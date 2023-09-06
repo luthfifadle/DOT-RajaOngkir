@@ -33,7 +33,9 @@ class FetchingRajaOngkir extends Command
 
     public function handle(RajaOngkir $rajaOngkirService)
     {
+        print('Start Fetching Data Raja Ongkir ...');
         $rajaOngkirService->fetchingProvince();
         $rajaOngkirService->fetchingCity();
+        print('Fetching Data Raja Ongkir Success');
     }
 }

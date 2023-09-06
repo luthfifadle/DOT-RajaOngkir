@@ -25,3 +25,14 @@ Untuk API Testing diharuskan menjalankan Dokumentasi tersebut di Aplikasi Postma
 ## Menjalankan Fetching Data Raja Ongkir
 Jalankan printah <b><i> php artisan app:fetching-raja-ongkir </i></b> di console
 
+## Menjalankan API
+### Sprint 1
+### Sprint 2
+1. Register </br>
+   <img width="852" alt="image" src="https://github.com/luthfifadle/DOT-RajaOngkir/assets/67321679/caab2d21-3b2f-46c0-b53c-68712f3a49d5">
+2. Login </br>
+    <img width="855" alt="image" src="https://github.com/luthfifadle/DOT-RajaOngkir/assets/67321679/caf8825a-75b0-46ba-a79b-35b990526b5a">
+   <p>Token disimpan di Variables</p>
+   <img width="847" alt="image" src="https://github.com/luthfifadle/DOT-RajaOngkir/assets/67321679/31c8baed-fe8a-4e43-8cb9-c7a4c417e164">
+   
+
